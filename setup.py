@@ -22,7 +22,7 @@ with open(os.path.join(project_path, "README.md"), "r", encoding="utf-8") as fh:
 # Setup the package
 setup(
     name="geosh",  # The name of the package
-    version="0.1.3",  # Version number; update as needed
+    version="0.1.4",  # Version number; update as needed
     author="Umberto Grechi",
     author_email="umberto.grechi@sofhare.com",
     description="Library and dependency for Geo Utilities Plugin",  # Short description
