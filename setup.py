@@ -1,15 +1,25 @@
 from setuptools import setup, find_packages, Extension
 from Cython.Build import cythonize
 import numpy as np
+import os
+
+
+# Get the project path (where setup.py is located)
+project_path = os.path.dirname(os.path.abspath(__file__))
 
 # Define an extension that includes your Cython file
 extensions = [
     Extension(
         "geosh.cy_theoretical_dc",  # Update to match the package name
-        ["geosh/cy_theoretical_dc.pyx"],  # Cython source file path
+        [os.path.join(project_path, "cy_theoretical_dc.pyx")],  # Cython source file path
         include_dirs=[np.get_include()],  # Include NumPy headers
     )
 ]
+
+with open(os.path.join(os.path.dirname(__file__), "README.md"), "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+
 
 # Setup the package
 setup(
@@ -18,7 +28,7 @@ setup(
     author="Umberto Grechi",
     author_email="umberto.grechi@sofhare.com",
     description="Library and fependency for Geo Utilities Plugin",  # Short description
-    long_description=open("README.md").read(),  # Detailed description from README
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Adre17/geosh",  # URL to your repository
     packages=find_packages(),  # Automatically find and include sub-packages
