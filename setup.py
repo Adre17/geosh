@@ -5,11 +5,12 @@ import os
 project_path = os.path.dirname(os.path.abspath(__file__))
 
 # Define the paths for the .pyd files for Python 3.11 and 3.12
+# Make sure to use a format that includes the relative path
 pyd_files = []
 if os.path.exists(os.path.join(project_path, 'geosh', 'cy_theoretical_dc.cp311-win_amd64.pyd')):
-    pyd_files.append('geosh/cy_theoretical_dc.cp311-win_amd64.pyd')
+    pyd_files.append('cy_theoretical_dc.cp311-win_amd64.pyd')
 if os.path.exists(os.path.join(project_path, 'geosh', 'cy_theoretical_dc.cp312-win_amd64.pyd')):
-    pyd_files.append('geosh/cy_theoretical_dc.cp312-win_amd64.pyd')
+    pyd_files.append('cy_theoretical_dc.cp312-win_amd64.pyd')
 
 # Read the long description from README.md
 with open(os.path.join(project_path, "README.md"), "r", encoding="utf-8") as fh:
@@ -45,12 +46,15 @@ setup(
         'segyio',
         'opencv-python',
         'openpyxl',
-        'opencv-contrib-python'
+        'opencv-contrib-python',
         'obspy'
     ],
-    # Include the compiled .pyd files
-    data_files=pyd_files,
+    package_data={
+        'geosh': pyd_files,  # Specify that the .pyd files are part of the geosh package
+    },
+    include_package_data=True,  # Include other package data specified in MANIFEST.in or above
 )
+
 
 
 
