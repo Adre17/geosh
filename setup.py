@@ -46,6 +46,7 @@ setup(
         'opencv-python',
         'openpyxl',
         'opencv-contrib-python'
+        'obspy'
     ],
     # Include the compiled .pyd files
     data_files=pyd_files,
