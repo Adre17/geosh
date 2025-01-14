@@ -55,7 +55,7 @@ setup(
                       'pandas', 'shapely', 'termcolor', 'matplotlib',
                       'click>8.0.0', 'numba', 'PyQt5','Pillow','psycopg2','reportlab',
                       'segyio','opencv-python','openpyxl','opencv-contrib-python','xlrd',
-                      'pyproj','cython'
+                      'pyproj','cython','ipython'
                       ],
     extras_require={
         'dev': ['tox', 'coverage', 'sphinx', 'sphinx_rtd_theme', 'sphinx-click', 'autopep8'],
