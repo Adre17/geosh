@@ -51,7 +51,7 @@ setup(
     keywords='horizontal-to-vertical spectral ratio hv hvsr',
     packages=find_packages(),
     python_requires='>=3.8',
-    install_requires=['numpy>=1.26', 'scipy', 'obspy',
+    install_requires=['numpy==1.26', 'scipy', 'obspy',
                       'pandas', 'shapely', 'termcolor', 'matplotlib',
                       'click>8.0.0', 'numba', 'PyQt5','Pillow','psycopg2','reportlab',
                       'segyio','opencv-python','openpyxl','opencv-contrib-python','xlrd',
