@@ -51,11 +51,11 @@ setup(
     keywords='horizontal-to-vertical spectral ratio hv hvsr',
     packages=find_packages(),
     python_requires='>=3.8',
-    install_requires=['numpy==1.26', 'scipy==1.15.2', 'obspy==1.4.1',
+    install_requires=['numpy==1.26', 'scipy==1.15.2', 
                       'pandas==2.2.3', 'shapely==2.0.7', 'termcolor==2.5.0', 'matplotlib==3.10.0',
                       'click>8.0.0', 'numba==0.61.0', 'PyQt5','Pillow==11.1.0','psycopg2==2.9.10','reportlab==4.3.1',
                       'segyio==1.9.13','opencv-python==4.11.0.86','openpyxl==3.1.5','opencv-contrib-python','xlrd==2.0.1',
-                      'pyproj==3.7.1','cython==3.0.12','ipython==8.32.0'
+                      'pyproj==3.7.1','cython==3.0.12','ipython==8.32.0','obspy==1.4.1'
                       ],
     extras_require={
         'dev': ['tox', 'coverage', 'sphinx', 'sphinx_rtd_theme', 'sphinx-click', 'autopep8'],
