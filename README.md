@@ -69,6 +69,6 @@ New high noise model (NHNM) and new low noise model (NLNM).
 > Noise (Open-File Report No. 93–322). U.S. Geologic Survey, Albuquerque, New Mexico.
 
 ## Compatibility
-geosh v 0.0.8
+geosh v 0.0.9
 Qgis version 3.34.11 & python 3.12 64 bit
 
